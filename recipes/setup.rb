@@ -8,6 +8,7 @@ package 'ntp' do
 end
 
 package 'vim-enhanced'
+package 'nano'
 
 package 'git' do
 	action :install
