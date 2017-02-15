@@ -14,10 +14,13 @@ package 'git' do
 	action :install
 end
 
-file 'etc/motd' do
-	content 'Property of....Rob\n'
-	owner 'root'
-	group 'root'
+#node['ipaddress']
+#node['memory']['total']
+
+
+template 'etc/motd' do
+	source 'motd.erb'
+	action :create
 end
 
 service 'ntpd' do
